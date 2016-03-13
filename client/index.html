@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="medicalJournals">
+  <head>
+    <meta charset="utf-8">
+    <title>Medical Journals</title>
+    <link href="lib/angular-material/angular-material.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class='container'>
+      <div class="viewContainer">
+        <div ui-view="login"></div>
+      </div>
+      <div class='viewContainer'>
+        <div ui-view="header"></div>
+      </div>
+      <div class='viewContainer'>
+        <div ui-view="content"></div>
+      </div>
+    </div>
+
+    <script src='lib/angular/angular.js'></script>
+    <script src='lib/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='lib/angular-route/angular-route.js'></script>
+    <script src='lib/angular-bootstrap/ui-bootstrap-tpls.js'></script>
+    <script src='lib/angular-bootstrap/ui-bootstrap.js'></script>
+    <script src="lib/angular-animate/angular-animate.js" type="text/javascript" ></script>
+    <script src="lib/angular-aria/angular-aria.js" type="text/javascript" ></script>
+    <script src="lib/angular-material/angular-material.js" type="text/javascript" ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

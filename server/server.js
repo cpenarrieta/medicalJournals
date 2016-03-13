@@ -6,7 +6,7 @@ var logger = require('./util/logger');
 var auth = require('./auth/routes');
 
 require('mongoose').connect(config.db.url);
-require('./middleware/appMiddlware')(app);
+require('./middleware/appMiddlware')(app, express);
 
 app.use('/api', api);
 app.use('/auth', auth);
@@ -23,5 +23,4 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Oops');
 });
 
-// export the app for testing
 module.exports = app;
