@@ -1,4 +1,5 @@
-var medicalJournals = angular.module('medicalJournals', ['ui.router', 'ngMaterial', 'ngRoute'])
+var medicalJournals = angular.module('medicalJournals',
+['ui.router', 'ngMaterial', 'ngRoute', 'controller.search', 'services.journals'])
   .config(function($stateProvider, $mdThemingProvider, $urlRouterProvider, $httpProvider) {
     $stateProvider
       .state('login', {
@@ -16,7 +17,8 @@ var medicalJournals = angular.module('medicalJournals', ['ui.router', 'ngMateria
             templateUrl : 'views/header.html',
           },
           "content": {
-            templateUrl : 'views/search.html'
+            templateUrl : 'views/search.html',
+            controller: 'searchController'
           }
         }
       });
